@@ -15,8 +15,8 @@ public class eventosVentanaProductos implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == ventanaProductos.boton1) {
-			if (ventanaProductos.boton1.isSelected()) {
+		if (e.getSource() == ventanaProductos.botonHamburguesa) {
+			if (ventanaProductos.botonHamburguesa.isSelected()) {
 
 				panelAñadido.setBounds(188, 0, 288, 383);
 				ventanaProductos.contentPane.add(panelAñadido);

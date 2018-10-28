@@ -14,8 +14,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
 
 public class ventanaProductos extends JFrame {
-	
-	static JToggleButton boton1, boton2, boton3, boton4, boton5, boton6;
+
+	static JToggleButton botonHamburguesa, botonPerrito, botonPizza, botonComplementos, botonEnsaladas, boton6;
 
 	static JPanel contentPane;
 
@@ -40,46 +40,46 @@ public class ventanaProductos extends JFrame {
 	 */
 	public ventanaProductos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 502, 468);
+		setBounds(100, 100, 502, 425);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 178, 429);
+		panel.setBounds(0, 0, 178, 386);
 		contentPane.add(panel);
 		panel.setLayout(null);
+
+		botonHamburguesa = new JToggleButton("HAMBURGUESA");
+		botonHamburguesa.setFont(new Font("Tahoma", Font.BOLD, 16));
+		botonHamburguesa.setBounds(0, 0, 178, 61);
+		panel.add(botonHamburguesa);
+		botonHamburguesa.addActionListener(new eventosVentanaProductos());
+
+		botonPerrito = new JToggleButton("PERRITO");
+		botonPerrito.setFont(new Font("Tahoma", Font.BOLD, 16));
+		botonPerrito.setBounds(0, 64, 178, 61);
+		panel.add(botonPerrito);
+
+		botonPizza = new JToggleButton("PIZZA");
+		botonPizza.setFont(new Font("Tahoma", Font.BOLD, 16));
+		botonPizza.setBounds(0, 128, 178, 61);
+		panel.add(botonPizza);
+
+		botonComplementos = new JToggleButton("COMPLEMENTOS");
+		botonComplementos.setFont(new Font("Tahoma", Font.BOLD, 16));
+		botonComplementos.setBounds(0, 194, 178, 61);
+		panel.add(botonComplementos);
+
+		botonEnsaladas = new JToggleButton("ENSALADAS");
+		botonEnsaladas.setFont(new Font("Tahoma", Font.BOLD, 16));
+		botonEnsaladas.setBounds(0, 259, 178, 61);
+		panel.add(botonEnsaladas);
 		
-		boton1 = new JToggleButton("HAMBURGUESA");
-		boton1.setFont(new Font("Tahoma", Font.BOLD, 16));
-		boton1.setBounds(0, 0, 178, 61);
-		panel.add(boton1);
-		boton1.addActionListener(new eventosVentanaProductos());
-		
-		boton2 = new JToggleButton("PERRITO");
-		boton2.setFont(new Font("Tahoma", Font.BOLD, 16));
-		boton2.setBounds(0, 64, 178, 61);
-		panel.add(boton2);
-		
-		boton3 = new JToggleButton("PIZZA");
-		boton3.setFont(new Font("Tahoma", Font.BOLD, 16));
-		boton3.setBounds(0, 128, 178, 61);
-		panel.add(boton3);
-		
-		boton4 = new JToggleButton("COMPLEMENTOS");
-		boton4.setFont(new Font("Tahoma", Font.BOLD, 16));
-		boton4.setBounds(0, 194, 178, 61);
-		panel.add(boton4);
-		
-		boton5 = new JToggleButton("ENSALADAS");
-		boton5.setFont(new Font("Tahoma", Font.BOLD, 16));
-		boton5.setBounds(0, 259, 178, 61);
-		panel.add(boton5);
-		
-		JToggleButton boton6 = new JToggleButton("New toggle button");
-		boton6.setFont(new Font("Tahoma", Font.BOLD, 16));
-		boton6.setBounds(0, 324, 178, 61);
-		panel.add(boton6);
+		JButton botonVolver = new JButton("VOLVER ATRAS");
+		botonVolver.setFont(new Font("Tahoma", Font.BOLD, 16));
+		botonVolver.setBounds(0, 323, 178, 61);
+		panel.add(botonVolver);
 	}
 }

@@ -41,32 +41,32 @@ public class ventanaPrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JPanel panel = new JPanel();
-		panel.setBounds(10, 11, 336, 331);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		
-		JButton btnNewButton = new JButton("OFERTA DEL D\u00CDA");
-		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnNewButton.setBounds(0, 0, 336, 62);
-		panel.add(btnNewButton);
-		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(356, 11, 183, 331);
-		contentPane.add(panel_1);
-		panel_1.setLayout(null);
-		
-		JButton btnNewButton_1 = new JButton("RECOMENDACIONES");
-		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnNewButton_1.setBounds(0, 0, 183, 64);
-		panel_1.add(btnNewButton_1);
-		
+
+		JPanel panelizquierdo = new JPanel();
+		panelizquierdo.setBounds(10, 11, 336, 331);
+		contentPane.add(panelizquierdo);
+		panelizquierdo.setLayout(null);
+
+		JButton botonOfertaDelDia = new JButton("OFERTA DEL D\u00CDA");
+		botonOfertaDelDia.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonOfertaDelDia.setBounds(0, 0, 336, 62);
+		panelizquierdo.add(botonOfertaDelDia);
+
+		JPanel panelDerecho = new JPanel();
+		panelDerecho.setBounds(356, 11, 183, 331);
+		contentPane.add(panelDerecho);
+		panelDerecho.setLayout(null);
+
+		JButton botonRecomendaciones = new JButton("RECOMENDACIONES");
+		botonRecomendaciones.setFont(new Font("Tahoma", Font.BOLD, 14));
+		botonRecomendaciones.setBounds(0, 0, 183, 64);
+		panelDerecho.add(botonRecomendaciones);
+
 		JButton botonProducto = new JButton("PRODUCTOS");
 		botonProducto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==botonProducto) {
-					ventanaProductos ventanaProductos=new ventanaProductos();
+				if (e.getSource() == botonProducto) {
+					ventanaProductos ventanaProductos = new ventanaProductos();
 					ventanaProductos.setVisible(true);
 					botonProducto.setEnabled(false);
 				}
@@ -74,7 +74,7 @@ public class ventanaPrincipal extends JFrame {
 		});
 		botonProducto.setFont(new Font("Tahoma", Font.BOLD, 14));
 		botonProducto.setBounds(0, 63, 183, 64);
-		panel_1.add(botonProducto);
+		panelDerecho.add(botonProducto);
 	}
 
 }
